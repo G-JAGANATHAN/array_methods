@@ -54,3 +54,16 @@ const getmovieTitle=(movies)=>{
     return movies.map(movie=>movie.title);
 };
 console.log(getmovieTitle(movie));
+
+const dispalyIndex =(movie,target)=>{
+    const finIndex = movie.geners.findIndex(gener=>gener === target);
+    console.log(finIndex);
+
+    if(finIndex !== -1){
+        movie.geners.splice(finIndex,1)
+    }
+}
+dispalyIndex(movie[0],"Thriller");
+
+console.log(movie[0].geners);
+
